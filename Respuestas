@@ -1,0 +1,94 @@
+/*
+1. Obtener los datos completos de los empleados.
+*/
+select * from Empleado
+/*
+2. Obtener los datos completos de los departamentos
+*/
+select * from Departamento
+/*
+3. Obtener los datos de los empleados con cargo 'Secretaria'.
+*/
+select * from Empleado 
+where Cargo = 'Secretaria'
+/*
+4. Obtener el nombre y salario de los empleados.
+*/
+select Nombre, Salario from Empleado
+/*
+5. Obtener los datos de los empleados vendedores, ordenado por nombre.
+*/
+select * from Empleado
+where Cargo = 'Vendedor'
+order by Nombre
+/*
+6. Listar el nombre de los departamentos
+*/
+select distinct NombreDto from Departamento
+/*
+7. Listar el nombre de los departamentos, ordenado por nombre
+*/
+select distinct NombreDto from Departamento
+order by NombreDto
+/*
+8. Listar el nombre de los departamentos, ordenado por ciudad
+*/
+select distinct NombreDto,Ciudad from Departamento
+order by Ciudad
+/*
+9. Listar el nombre de los departamentos, ordenado por ciudad, en orden inverso
+*/
+select distinct NombreDto, Ciudad from Departamento
+order by Ciudad desc
+/*
+10. Obtener el nombre y cargo de todos los empleados, ordenado por salario
+*/
+select Nombre, Cargo, Salario from Empleado
+order by Salario
+/*
+11. Obtener el nombre y cargo de todos los empleados, ordenado por cargo y por salario
+*/
+select Nombre, Cargo, Salario from Empleado
+order by Cargo, Salario
+/*
+12. Obtener el nombre y cargo de todos los empleados, en orden inverso por cargo
+*/
+select Nombre, Cargo from Empleado
+order by Cargo desc
+/*
+13. Listar los salarios y comisiones de los empleados del departamento 2000
+*/
+select distinct salario, Comision from Empleado
+where DepartamentoId = 2000
+/*
+14. Listar los salarios y comisiones de los empleados del departamento 2000, ordenado por comisión
+*/
+select distinct salario, comision from Empleado 
+where DepartamentoId = 2000
+order by Comision
+/*
+15. Listar todas las comisiones
+*/
+select distinct Comision from Empleado
+/*
+16. Listar las comisiones que sean diferentes, ordenada por valor
+*/
+select distinct Comision from Empleado
+order by Comision
+/*
+17. Listar los diferentes salarios
+*/
+select distinct Salario from Empleado
+/*
+18. Obtener el valor total a pagar que resulta de sumar a los empleados del departamento 3000 una
+bonificación de $500.000, en orden alfabético del empleado
+*/
+select Nombre, Salario, Comision from Empleado
+where DepartamentoId = 3000
+select SUM(Salario + Comision + 500000) as TotalAPagar from Empleado 
+where DepartamentoId = 3000
+/*
+19. Obtener la lista de los empleados que ganan una comisión superior a su sueldo.
+*/
+select Nombre, Salario, Comision from Empleado
+where Comision > Salario
