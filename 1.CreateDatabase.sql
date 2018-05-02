@@ -9,8 +9,10 @@ DepartamentoId varchar (4) PRIMARY KEY,
 NombreDto varchar (20) NOT NULL,
 Ciudad varchar (15),
 DirectorId int
-);CREATE TABLE Empleado (
-EmpleadoId int NOT NULL PRIMARY KEY Identity(1000,1),
+);
+
+CREATE TABLE Empleado (
+EmpleadoId int NOT NULL PRIMARY KEY,
 Nombre VARCHAR( 30 ) NOT NULL ,
 Sexo CHAR( 1 ) NOT NULL CHECK (Sexo IN ('F', 'M') ),
 FecNacimiento DATE NOT NULL ,
