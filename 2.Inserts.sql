@@ -4,13 +4,13 @@ INSERT INTO Departamento (DepartamentoId, NombreDto, Ciudad, DirectorId) VALUES
 ('2000', 'VENTAS', 'CALI', 2),
 ('3000', 'INVESTIGACIÓN', 'CALI',3),
 ('3500', 'MERCADEO', 'CALI', 4),
-('2100', 'VENTAS', 'POPAYAN', 5),
-('2200', 'VENTAS', 'BUGA', 5),
-('2300', 'VENTAS', 'CARTAGO', 5),
-('4000', 'MANTENIMIENTO', 'CALI', 6),
-('4100', 'MANTENIMIENTO', 'POPAYAN', 6),
-('4200', 'MANTENIMIENTO', 'BUGA', 6),
-('4300', 'MANTENIMIENTO', 'CARTAGO', 6);
+('2100', 'VENTAS 1', 'POPAYAN', 5),
+('2200', 'VENTAS 2', 'BUGA', 5),
+('2300', 'VENTAS 3', 'CARTAGO', 5),
+('4000', 'MANTENIMIENTO A', 'CALI', 6),
+('4100', 'MANTENIMIENTO B', 'POPAYAN', 6),
+('4200', 'MANTENIMIENTO C', 'BUGA', 6),
+('4300', 'MANTENIMIENTO D', 'CARTAGO', 6);
  
 INSERT INTO Empleado (EmpleadoId, Nombre, Sexo, FecNacimiento, FecRegistro, Salario,Comision,
  Cargo, JefeId, DepartamentoId)
